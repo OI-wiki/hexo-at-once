@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: hexo at once
-subtitle:
-description:
-keywords:
-author: OI-Wiki
-language: zh-CN
-timezone:
+title: hexo at once # 标题
+subtitle:           # 副标题
+description:        # 说明
+keywords:           # 关键词
+author: OI-Wiki     # 作者
+language: zh-CN     # 语言
+timezone:           # 时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
+url: http://yoursite.com             # 链接
+root: /                              # 根
+permalink: :year/:month/:day/:title/ 
 permalink_defaults:
 
 # Directory
