@@ -1,75 +1,31 @@
-# hexo at once
+# Hexo at Once
 
-hexo at once 的目标是帮助 OIer 更方便地记笔记、写博客，让使用者不用关心其它东西，专注于写文章。
-
-[Demo](https://hexo-at-once.netlify.com)
+> 为 OIer 定制的 Hexo 博客模板，开箱即用。
 
 ## 特性
 
-- 使用 [hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus) 主题，美观、简洁
-- 支持 Mathjax
-- 支持 RSS
-- 接近“开箱即用”，只需极少配置
-- 使用 Markdown 写作
-- ······
+- 使用 [hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus) 主题，美观、简洁、大方。
+- 使用 Markdown 写作，并使用 Mathjax 渲染数学公式。
+- 开箱即用，基本无需配置。
 
 ## 快速开始
 
-### 1. 创建博客存储库
+![](https://user-images.githubusercontent.com/47095648/147397986-dec92198-d1e0-4434-8d57-4a50530a274a.png)
 
-1. 打开 [hexo-at-once](https://github.com/OI-wiki/hexo-at-once) 项目仓库。
-2. 点击 Use this template。
-   ![Use this template](./images/use-this-template.png)
-3. 从模板创建存储库。 
-    ![create-repo-from-temp](./images/create-repo-from-temp.png)
+点击仓库页面右上角的 **Use this template** 按钮。
 
-这样，你就创建好博客的存储库了！
+![](https://user-images.githubusercontent.com/47095648/147398029-beb5a13a-15ce-4186-a16f-6c1d1a650bee.png)
 
-### 2. 配置博客
+输入仓库名称，如 `[用户名].github.io`（若使用子目录需要配置 `_config.yml` 中的 `root` 选项）。
 
-可在 `./_config.yml` 和 `./themes/icarus/_config.yml` 中进行配置。
+![image](https://user-images.githubusercontent.com/47095648/147398116-b5945e08-b567-4366-b3e4-2ccbd5bb5ff1.png)
 
-前者是整个 Hexo 的配置文件，文档可见 [官方文档](https://hexo.io/zh-cn/docs/configuration)。
+新建仓库完成后，修改 `_config.yml` 中的 `url` 选项。
 
-后者是 hexo-theme-icarus 的主题配置文件，可见 [EasyHexo: hexo-theme-icarus](https://easyhexo.com/2-Theme-use-and-config/2-12-hexo-theme-icarus/) 中的文档。
+![image](https://user-images.githubusercontent.com/47095648/147398112-550a4c8a-a946-4962-b0c7-28191cfcffb8.png)
 
-### 3. 配置 Netlify
+然后在 **Settings** 中的 **Pages** 选项卡下将站点分支设置为 `gh-pages` 。
 
-Netlify 是一个可以部署静态网站的平台，也可以从 GitHub/GitLab/Bitbucket 的项目中快速构建你的网站。相比 GitHub Pages 更加专业、便捷，即使在国内的访问速度也不错。
+在 `sources/_posts` 文件夹下新建一个 `.md` 文件，然后愉快地开始你的写作吧！
 
-1. 首先打开 [Netlify 官网](https://www.netlify.com/)，用 GitHub 帐号登录。
-2. 点击 **New site from Git**，进入 **Create a new site** 页面。
-   1. **Connect to Git provider** 页面，选择 GitHub。
-   2. **Pick a repository** 页面，选择你刚刚创建的博客存储库。
-   3. 最后一步 **Build options, and deploy!**，Netlify 会检测到是 Hexo 项目，自动配置好了。点击 **Deploy site** 按钮即可。
-   ![build-options](./images/build-options.png)
-
-最后出现如下界面：
-
-![deploy-done](./images/deploy-done.png)
-
-可以看到 Netlify 自动分配了一个域名，在这个网站中是 `https://nifty-noyce-b98546.netlify.com`。
-
-如果你有自己的域名并想要绑定它，请点击 **Set up a custom domain** 链接。这里不再赘述，详细步骤请见 [Netlify Docs: custom-domains](https://www.netlify.com/docs/custom-domains)。
-
-关于 HTTPS 的设置，Netlify Docs 中也有详细教程。请自行阅读。
-
-### 4. 写作
-
-写作使用 Markdown 语言，在 `./source/_posts` 目录下创建 Markdown 文件并编写即可。
-
-> 关于 Markdown，如果你还不太了解，可见 [教程](https://juejin.im/post/5c1cd16de51d4563d9206173)。
-
----
-
-最后，如有疑问，可提 issue。
-
-欢迎 PR。
-
----
-
-如果你想了解更多 Hexo 相关内容，可前往 [EasyHexo](https://github.com/EasyHexo/Easy-Hexo)。
-
----
-
-💡 Maintained by [ChungZH](https://github.com/ChungZH).
+> 小提示：可以在仓库主页按下键盘上的 <kbd>.</kbd> 以打开网页版的 VSCode 编辑器。
