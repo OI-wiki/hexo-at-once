@@ -1,0 +1,30 @@
+name: Deploy Blog
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Hexo
+      run: npm install
+    - name: Generate blog
+      run: npx hexo generate
+    - name: Post generate steps
+      run: touch public/.nojekyll
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1.5.1
+      with:
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
